@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main(void) 
+{
+    int n;
+    scanf("%d", &n);
+    
+	int M1[n][n];
+	int M2[n][n];
+	int Pr[n][n];
+	
+	/*So I am taking the two matrices such that each element fo them is 1, just for simplicity*/
+	for(int k1 = 0; k1 < n; k1++)
+	{
+	    for( int k2 = 0; k2 <n ; k2++)
+	    {
+	    M1[k1][k2] = 1;
+	    M2[k1][k2] = 1;
+	    }
+	    
+	}
+	
+
+	for(int i = 0; i<n; i++ )
+	{
+	    for(int j =0; j < n; j++)
+	    {
+	        	int sum = 0;
+
+	        for (int l = 0; l<n; l++)
+	        {
+	            sum += M1[i][l]*M2[l][j];
+	        }
+	        Pr[i][j] = sum;
+	        sum == 0;
+	    }
+	}
+	
+	for(int i = 0; i<n; i++ )
+	{
+	    for(int j =0; j < n; j++)
+	    {
+	        printf("%d ", Pr[i][j]);
+	    }
+	}
+	
+}
+
