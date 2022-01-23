@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int f1 = 0;
+    int f2 = 1;
+    
+    printf("%d %d ",f1, f2 );
+    
+    int fnext;
+    fnext = f1 + f2;
+    
+    while (fnext <= n) 
+    {
+        printf("%d ", fnext);
+        f1 = f2;
+        f2 = fnext;
+        fnext = f1 + f2;
+  }
+}
+
