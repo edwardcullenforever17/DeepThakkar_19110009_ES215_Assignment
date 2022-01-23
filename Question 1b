@@ -12,7 +12,8 @@ int main()
     int fnext;
     fnext = f1 + f2;
     
-    while (fnext <= n) 
+    int i;
+    while (i <= n) 
     {
         printf("%d ", fnext);
         f1 = f2;
