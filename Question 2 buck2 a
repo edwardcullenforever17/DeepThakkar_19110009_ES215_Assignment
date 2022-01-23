@@ -2,9 +2,9 @@ import numpy as np
 
 n = int(input())
 
-M1 = np.zeros((n, n), np.float32)
-M2 = np.zeros((n, n), np.float32)
-Pr = np.zeros((n, n), np.float32)
+M1 = np.zeros((n, n), np.int32)
+M2 = np.zeros((n, n), np.int32)
+Pr = np.zeros((n, n), np.int32)
 
 for i in range(n):
     for j in range(n):
