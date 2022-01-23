@@ -1,14 +1,20 @@
 #include<stdio.h>
 
-int fib(int n)
+int fib(int n, int Ar[])
 {
    if (n == 1 || n==2)
    {
-       return (n-1);
+       Ar[n] = (n-1);
+       return n-1;
+   }
+   else if (Ar[n] != 0)
+   {
+       return Ar[n];
    }
    else
    {
-       return fib(n-1) + fib(n-2);
+       Ar[n] = fib(n-1, Ar) + fib(n-2, Ar);
+       return Ar[n];
    }
       
 }
@@ -18,8 +24,10 @@ int main (void)
   int n;
   scanf("%d", &n);
   
+  int Ar[100] = {0};
+  
   for(int i = 1; i <= n; i++)
   {
-      printf("%d ", fib(i));
+      printf("%d ", fib(i, Ar));
   }
 }
