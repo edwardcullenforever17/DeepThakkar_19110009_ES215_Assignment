@@ -1,0 +1,21 @@
+import numpy as np
+
+n = int(input())
+
+M1 = np.zeros((n, n), np.int32)
+M2 = np.zeros((n, n), np.int32)
+Pr = np.zeros((n, n), np.int32)
+
+for i in range(n):
+    for j in range(n):
+        M1[i][j] += 0.1
+        M2[i][j] += 0.1
+       
+
+#So I am taking the two matrices such that each element fo them is 1, just for simplicity
+
+for i in range(n):
+    for j in range(n):
+        for k in range (n):
+            Pr[i][j] += M1[i][k]*M2[i][k]
+print(Pr)
